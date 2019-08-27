@@ -8,9 +8,9 @@ Ansible stuffs for setting up my desktop environment from fresh install
 
 ```bash
 $ sudo apt-get install -y software-properties-common \
-  sudo apt-add-repository -y ppa:ansible/ansible \
-  sudo apt-get update 
-  sudo apt-get install -y ansible
+  && sudo apt-add-repository -y ppa:ansible/ansible \
+  && sudo apt-get update \
+  && sudo apt-get install -y ansible
 ```
 
 ## Run the ansible playbook
