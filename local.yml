@@ -13,6 +13,6 @@
     - include: tasks/users.yml
     - include: tasks/cron.yml
     - include: tasks/packages.yml
-    - include: tasts/gnome.yml
+    - include: tasks/gnome.yml
     
    
