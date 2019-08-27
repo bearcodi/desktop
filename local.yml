@@ -6,7 +6,7 @@
       changed_when: False
   vars:
     user_home: "{{ home }}"
-    user_id: "{{ uid }}"
+    user_uid: "{{ uid }}"
     user_gid: "{{ gid }}"
 
   tasks:
