@@ -6,7 +6,7 @@
   
 - name: Set GTK theme
   become_user: "{{ user_uid }}"
-  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Arc-Dark'"
+  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="Arc-Dark"
   
 - name: Copy wallpaper file
   copy: src=files/wallpaper.jpg dest={{ user_home }}/.wallpaper.jpg owner={{ user_uid }} group={{ user_gid }} mode=600
