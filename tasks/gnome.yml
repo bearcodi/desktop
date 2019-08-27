@@ -9,13 +9,13 @@
   dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Arc-Dark'"
   
 - name: Copy wallpaper file
-  copy: src=files/wallpaper.jpg dest=/opt/wallpaper.jpg owner={{ user_uid }} group={{ user_gid }} mode=600
+  copy: src=files/wallpaper.jpg dest=/opt/wallpaper.jpg owner={{ user_uid }} group={{ user_gid }} mode=644
 
 - name: Set GNOME wallpaper
   dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///opt/wallpaper.jpg'"
 
 - name: Copy lockscreenfile
-  copy: src=files/lockscreen.jpg dest="/opt/lockscreen.jpg" owner={{ user_uid }} group={{ user_gid }} mode=600
+  copy: src=files/lockscreen.jpg dest="/opt/lockscreen.jpg" owner={{ user_uid }} group={{ user_gid }} mode=644
 
 - name: Set lock screen background
   become_user: "{{ user_uid }}"
