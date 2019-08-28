@@ -25,6 +25,7 @@ $ sudo ansible-pull -U https://github.com/bearcodi/desktop.git \
 > **SECURITY** The `https` version of the repository URL for security purposes makes the repository `read-only` by default
 
 ## Standard packages
+ - [ ] gnome-tweaks
  - [x] git
  - [x] terminator
  - [x] htop
@@ -45,5 +46,8 @@ $ sudo ansible-pull -U https://github.com/bearcodi/desktop.git \
  - [x] Custom wallpaper
  - [x] Custom lockscreen
  - [x] Custom theme (Arc-Dark)
- - [ ] Auto hide the task bar
- - [ ] Position task bar at the bottom
+ - [ ] Auto hide dock
+ - [ ] Position dock at bottom
+ - [ ] Workspaces span displays
+ - [ ] Top bar show date, seconds and week numbers in calendar
+ 
