@@ -15,6 +15,7 @@
   copy: src=files/wallpaper.jpg dest=/opt/wallpaper.jpg owner={{ user_uid }} group={{ user_gid }} mode=644
 
 - name: Set GNOME wallpaper
+  become_user: "{{ user_uid }}"
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
     value: "file:///opt/wallpaper.jpg"
