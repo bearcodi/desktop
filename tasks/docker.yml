@@ -15,7 +15,7 @@
   
 - name: Add Docker CE apt repository
   apt_repository:
-    repo: ''
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
     state: present
     update_cache: yes
 
