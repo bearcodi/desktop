@@ -6,17 +6,26 @@
   
 - name: Set GTK theme
   become_user: "{{ user_uid }}"
-  dconf: key="/org/gnome/desktop/interface/gtk-theme" value="'Arc-Dark'"
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "Arc-Dark"
+    state: present
   
 - name: Copy wallpaper file
   copy: src=files/wallpaper.jpg dest=/opt/wallpaper.jpg owner={{ user_uid }} group={{ user_gid }} mode=644
 
 - name: Set GNOME wallpaper
-  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///opt/wallpaper.jpg'"
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "file:///opt/wallpaper.jpg"
+    state: present
 
 - name: Copy lockscreenfile
   copy: src=files/lockscreen.jpg dest="/opt/lockscreen.jpg" owner={{ user_uid }} group={{ user_gid }} mode=644
 
 - name: Set lock screen background
   become_user: "{{ user_uid }}"
-  dconf: key="/org/gnome/desktop/screensaver/picture-uri" value="'file:///opt/lockscreen.jpg'"
+  dconf:
+    key: "/org/gnome/desktop/screensaver/picture-uri"
+    value: "file:///opt/lockscreen.jpg"
+    state: present
