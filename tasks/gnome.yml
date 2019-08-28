@@ -5,8 +5,8 @@
   apt: name=arc-theme
   
 - name: Set GTK theme
+  become: true
   dconf:
-    become: true
     key: "/org/gnome/desktop/interface/gtk-theme"
     value: "'Arc-Dark'"
     state: present
@@ -15,8 +15,8 @@
   copy: src=files/wallpaper.jpg dest=/usr/share/backgrounds/wallpaper.jpg owner={{ user_uid }} group={{ user_gid }} mode=644
 
 - name: Set GNOME wallpaper
+  become: true
   dconf:
-    become: true
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///usr/share/backgrounds/wallpaper.jpg'"
     state: present
@@ -25,8 +25,8 @@
   copy: src=files/lockscreen.jpg dest=/usr/share/backgrounds/lockscreen.jpg owner={{ user_uid }} group={{ user_gid }} mode=644
 
 - name: Set lock screen background
+  become: true
   dconf:
-    become: true
     key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///usr/share/backgrounds/lockscreen.jpg'"
     state: present
