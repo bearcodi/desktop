@@ -1,0 +1,34 @@
+- name: Install Docker dependencies
+  apt: name={{item}}
+  with_items:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg-agent
+    - software-properties-common
+    - ctop
+    
+- name: Add Docker GPG Key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+  
+- name: Add Docker CE apt repository
+  apt_repository:
+    repo: ''
+    state: present
+    update_cache: yes
+
+- name: Install Docker CE
+  apt: name={{item}}
+  with_items:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    
+- name: Add user to "docker" group
+  user:
+    name: "{{ user_uid }}"
+    groups: "docker"
+    append: true
+  
