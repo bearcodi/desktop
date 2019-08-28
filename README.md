@@ -24,3 +24,27 @@ $ A_HOME=~; A_UID=$(id -un); A_GID=$(id -gn) \
 ```
 
 > **SECURITY** The `https` version of the repository URL for security purposes makes the repository `read-only` by default
+
+## Standard packages
+ - [x] git
+ - [x] terminator
+ - [x] htop
+ - [x] httpie
+ - [x] wget
+ - [ ] zsh with theme
+
+## Development environment
+
+ - [x] Docker
+ - [x] ctop
+ - [ ] Docker-Compose
+ - [ ] MySql Workbench
+ - [x] Vim
+ - [ ] Atom
+ 
+## OS customisations
+ - [x] Custom wallpaper
+ - [x] Custom lockscreen
+ - [x] Custom theme (Arc-Dark)
+ - [ ] Auto hide the task bar
+ - [ ] Position task bar at the bottom
