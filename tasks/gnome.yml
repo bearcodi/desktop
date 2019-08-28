@@ -6,8 +6,8 @@
   
 - name: Set GTK theme
   dconf:
-    key: "/org/gnome/desktop/interface/gtk-theme/"
-    value: "Arc-Dark"
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "'Arc-Dark'"
     state: present
   
 - name: Copy wallpaper file
