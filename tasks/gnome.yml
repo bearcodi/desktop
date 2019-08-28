@@ -6,6 +6,7 @@
   
 - name: Set GTK theme
   become: true
+  become_user: "{{ user_uid }}"
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
     value: "'Arc-Dark'"
@@ -26,6 +27,7 @@
 
 - name: Set lock screen background
   become: true
+  become_user: "{{ user_uid }}"
   dconf:
     key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///usr/share/backgrounds/lockscreen.jpg'"
