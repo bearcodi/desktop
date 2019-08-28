@@ -15,7 +15,7 @@
 
 - name: Set GNOME wallpaper
   dconf:
-    key: "/org/gnome/desktop/background/picture-uri/"
+    key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///opt/wallpaper.jpg'"
     state: present
 
@@ -24,6 +24,6 @@
 
 - name: Set lock screen background
   dconf:
-    key: "/org/gnome/desktop/screensaver/picture-uri/"
+    key: "/org/gnome/desktop/screensaver/picture-uri"
     value: "'file:///opt/lockscreen.jpg'"
     state: present
